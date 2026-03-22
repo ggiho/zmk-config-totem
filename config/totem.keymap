@@ -141,10 +141,10 @@
 
         nav_num {
             bindings = <
-                   &kp LA(BACKSPACE)   &kp BACKSPACE  &kp UP     &kp DELETE     &kp LA(DELETE)        &none      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &none
-                   &kp LA(LEFT_ARROW)  &kp LEFT       &kp DOWN   &kp RIGHT      &kp LA(RIGHT)         &none      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &none
-&kp LG(BACKSPACE)  &kp LG(UP_ARROW)    &kp LG(LEFT)   &kp ENTER  &kp LG(RIGHT)  &kp LG(DOWN_ARROW)    &none      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none  &none
-                                                      &trans     &trans         &trans                &kp EQUAL  &kp NUMBER_0  &kp PERCENT
+                &kp LA(BACKSPACE)   &kp BACKSPACE  &kp UP     &kp DELETE     &kp LA(DELETE)        &none      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &none
+                &kp LA(LEFT_ARROW)  &kp LEFT       &kp DOWN   &kp RIGHT      &kp LA(RIGHT)         &none      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &none
+&bt BT_CLR_ALL  &kp LG(UP_ARROW)    &kp LG(LEFT)   &kp ENTER  &kp LG(RIGHT)  &kp LG(DOWN_ARROW)    &none      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none  &none
+                                                   &trans     &trans         &trans                &kp EQUAL  &kp NUMBER_0  &kp PERCENT
             >;
         };
 

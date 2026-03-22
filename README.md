@@ -17,7 +17,7 @@
 이 저장소는 GitHub Actions의 ZMK 공용 워크플로를 사용해 펌웨어를 빌드합니다.
 `push`, `pull_request`, `workflow_dispatch` 시 자동으로 빌드됩니다.
 
-안정적으로 독립 빌드되도록 ZMK 업스트림은 `v0.3`으로 고정했습니다.
+원본과 동일하게 ZMK 업스트림 `main` 브랜치를 따라가도록 구성했습니다.
 
 ## 생성되는 펌웨어
 

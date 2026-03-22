@@ -1,0 +1,8 @@
+.DS_Store
+
+# Local ZMK workspace/build artifacts
+.west/
+build/
+modules/
+zephyr/
+zmk/

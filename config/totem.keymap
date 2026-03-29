@@ -159,7 +159,7 @@
             bindings = <
             &kp Q                   &kp W                &kp E                    &kp R                     &kp T                         &kp Y      &kp U                      &kp I        &kp O    &kp P
             &homerow_LCtrl LCTRL A  &homerow LEFT_ALT S  &homerow LEFT_COMMAND D  &homerow_LShift LSHIFT F  &kp G                         &kp H      &kp J                      &kp K        &kp L    &homerow_Rshift RSHFT SEMICOLON
-&caps_word  &kp Z                   &kp X                &kp C                    &kp V                     &kp B                         &kp N      &kp M                      &kp COMMA    &kp DOT  &kp SLASH                        &kp SINGLE_QUOTE
+&caps_word  &bt BT_SEL 0            &bt BT_SEL 1         &bt BT_SEL 2             &kp V                     &kp B                         &kp N      &kp M                      &kp COMMA    &kp DOT  &kp SLASH                        &kp SINGLE_QUOTE
                                                          &kp LGUI                 &lt 1 SPACE               &homerow_LShift LSHIFT TAB    &kp ENTER  &LT_LANG_FAST 2 BACKSLASH  &lt 3 CARET
             >;
         };

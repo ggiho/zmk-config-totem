@@ -112,7 +112,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <130>;
-            quick-tap-ms = <110>;
+            quick-tap-ms = <100>;
         };
 
         homerow: homerow {
@@ -156,6 +156,7 @@
             tapping-term-ms = <135>;
             flavor = "tap-preferred";
             quick-tap-ms = <100>;
+            hold-trigger-on-release;
         };
     };
 
@@ -173,10 +174,10 @@
 
         nav_num {
             bindings = <
-        &kp LG(NUMBER_1)    &kp LG(NUMBER_2)  &kp LG(E)  &kp LG(NUMBER_8)  &kp LA(DELETE)        &none      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &none
-        &kp LA(LEFT_ARROW)  &kp LEFT          &kp DOWN   &kp RIGHT         &kp LA(RIGHT)         &none      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans
-&trans  &kp LG(UP_ARROW)    &kp LG(LEFT)      &kp ENTER  &kp LG(RIGHT)     &kp LG(DOWN_ARROW)    &none      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none   &none
-                                              &trans     &trans            &trans                &kp EQUAL  &kp NUMBER_0  &kp PERCENT
+        &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(E)  &kp LG(NUMBER_8)  &trans    &none      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &none
+        &kp LS(LG(LEFT))  &trans            &trans     &trans            &trans    &kp CARET  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp LG(LS(RIGHT))
+&trans  &trans            &trans            &trans     &trans            &trans    &kp PLUS   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none              &none
+                                            &trans     &trans            &trans    &kp EQUAL  &kp NUMBER_0  &kp PERCENT
             >;
         };
 
@@ -200,10 +201,10 @@
 
         layer_7 {
             bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+        &kp LA(NUMBER_1)  &kp LA(NUMBER_2)  &kp LA(NUMBER_3)  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+        &trans            &trans            &trans            &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans            &trans            &trans            &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                                            &trans            &trans  &trans    &trans  &trans  &trans
             >;
         };
     };

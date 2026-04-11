@@ -158,22 +158,6 @@
         };
     };
 
-    macros {
-        tmux_prefix_s: tmux_prefix_s {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(A) &kp S>;
-            label = "TMUX_PREFIX_S";
-        };
-
-        tmux_prefix_c: tmux_prefix_c {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(A) &kp C>;
-            label = "TMUX_PREFIX_C";
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -188,10 +172,10 @@
 
         nav_num {
             bindings = <
-        &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(E)       &kp LG(NUMBER_8)  &kp LS(LG(T))    &none      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &none
-        &kp LS(LG(LEFT))  &tmux_prefix_s    &trans          &trans            &trans           &kp CARET  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp LG(LS(RIGHT))
-&trans  &trans            &trans            &tmux_prefix_c  &trans            &trans           &kp PLUS   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none              &none
-                                            &trans          &trans            &trans           &kp EQUAL  &kp NUMBER_0  &kp PERCENT
+        &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(E)  &kp LG(NUMBER_8)  &kp LS(LG(T))    &none      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &none
+        &kp LS(LG(LEFT))  &trans            &trans     &trans            &trans           &kp CARET  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp LG(LS(RIGHT))
+&trans  &trans            &trans            &trans     &trans            &trans           &kp PLUS   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none              &none
+                                            &trans     &trans            &trans           &kp EQUAL  &kp NUMBER_0  &kp PERCENT
             >;
         };
 

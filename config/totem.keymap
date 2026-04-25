@@ -158,22 +158,31 @@
         };
     };
 
+    macros {
+        tmux_prefix_s: tmux_prefix_s {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(A) &kp S>;
+            label = "TMUX_PREFIX_S";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         base {
             bindings = <
-                &kp Q                   &kp W                &kp E                    &kp R                     &kp T        &kp Y      &kp U                      &kp I       &kp O    &kp P
-                &homerow_LCtrl LCTRL A  &homerow LEFT_ALT S  &homerow LEFT_COMMAND D  &homerow_LShift LSHIFT F  &kp G        &kp H      &kp J                      &kp K       &kp L    &homerow_Rshift RSHFT SEMICOLON
-&kp LEFT_SHIFT  &kp Z                   &kp X                &kp C                    &kp V                     &kp B        &kp N      &kp M                      &kp COMMA   &kp DOT  &kp SLASH                        &kp SINGLE_QUOTE
-                                                             &kp LGUI                 &lt 1 SPACE               &lt 4 TAB    &kp ENTER  &LT_LANG_FAST 2 BACKSLASH  &caps_word
+                &kp Q                   &kp W                &kp E                    &kp R                     &kp T                                    &kp Y      &kp U                      &kp I       &kp O    &kp P
+                &homerow_LCtrl LCTRL A  &homerow LEFT_ALT S  &homerow LEFT_COMMAND D  &homerow_LShift LSHIFT F  &kp G                                    &kp H      &kp J                      &kp K       &kp L    &homerow_Rshift RSHFT SEMICOLON
+&kp LEFT_SHIFT  &kp Z                   &kp X                &kp C                    &kp V                     &kp B                                    &kp N      &kp M                      &kp COMMA   &kp DOT  &kp SLASH                        &kp SINGLE_QUOTE
+                                                             &kp LGUI                 &lt 1 SPACE               &homerow LS(LA(LC(LEFT_COMMAND))) TAB    &kp ENTER  &LT_LANG_FAST 2 BACKSLASH  &caps_word
             >;
         };
 
         nav_num {
             bindings = <
         &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(E)  &kp LG(NUMBER_8)  &kp LS(LG(T))    &none      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &none
-        &kp LS(LG(LEFT))  &trans            &trans     &trans            &trans           &kp CARET  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp LG(LS(RIGHT))
+        &kp LS(LG(LEFT))  &tmux_prefix_s    &trans     &trans            &trans           &kp CARET  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp LG(LS(RIGHT))
 &trans  &trans            &trans            &trans     &trans            &trans           &kp PLUS   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none              &none
                                             &trans     &trans            &trans           &kp EQUAL  &kp NUMBER_0  &kp PERCENT
             >;

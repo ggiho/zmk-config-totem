@@ -27,6 +27,7 @@
         minus {
             bindings = <&kp MINUS>;
             key-positions = <16 7>;
+            layers = <0>;
         };
 
         equal {
@@ -58,11 +59,13 @@
         left_parenthesis {
             bindings = <&kp LEFT_BRACKET>;
             key-positions = <6 7>;
+            layers = <0>;
         };
 
         right_parenthesis {
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <7 8>;
+            layers = <0>;
         };
 
         esc {
@@ -176,7 +179,7 @@
 
         nav_num {
             bindings = <
-        &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(E)  &kp LG(NUMBER_8)  &kp LS(LG(T))    &none      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &none
+        &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(E)  &kp LG(NUMBER_8)  &kp LS(LG(T))    &none      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS
         &kp LS(LG(LEFT))  &tmux_prefix_s    &kp D      &trans            &trans           &kp CARET  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp LG(LS(RIGHT))
 &trans  &trans            &trans            &trans     &trans            &trans           &kp PLUS   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none              &none
                                             &trans     &trans            &trans           &kp EQUAL  &kp NUMBER_0  &kp MINUS

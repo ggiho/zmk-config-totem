@@ -21,6 +21,7 @@
         backspace {
             bindings = <&kp BACKSPACE>;
             key-positions = <16 17>;
+            layers = <0>;
         };
 
         minus {
@@ -51,6 +52,7 @@
         question_mark {
             bindings = <&kp QUESTION>;
             key-positions = <28 29>;
+            layers = <0>;
         };
 
         left_parenthesis {
@@ -66,6 +68,7 @@
         esc {
             bindings = <&kp ESC>;
             key-positions = <17 18>;
+            layers = <0>;
         };
 
         tmux_prefix {
@@ -81,11 +84,13 @@
         single_quotes {
             bindings = <&kp SINGLE_QUOTE>;
             key-positions = <16 18>;
+            layers = <0>;
         };
 
         f18 {
             bindings = <&kp F18>;
             key-positions = <27 28>;
+            layers = <0>;
         };
 
         grave {
@@ -172,9 +177,9 @@
         nav_num {
             bindings = <
         &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(E)  &kp LG(NUMBER_8)  &kp LS(LG(T))    &none      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &none
-        &kp LS(LG(LEFT))  &tmux_prefix_s    &trans     &trans            &trans           &kp CARET  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp LG(LS(RIGHT))
+        &kp LS(LG(LEFT))  &tmux_prefix_s    &kp D      &trans            &trans           &kp CARET  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp LG(LS(RIGHT))
 &trans  &trans            &trans            &trans     &trans            &trans           &kp PLUS   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none              &none
-                                            &trans     &trans            &trans           &kp EQUAL  &kp NUMBER_0  &kp PERCENT
+                                            &trans     &trans            &trans           &kp EQUAL  &kp NUMBER_0  &kp MINUS
             >;
         };
 

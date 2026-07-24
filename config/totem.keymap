@@ -78,6 +78,7 @@
         tmux_prefix {
             bindings = <&kp LC(A)>;
             key-positions = <10 11>;
+            layers = <0>;
         };
 
         underscore {
@@ -100,6 +101,15 @@
         grave {
             bindings = <&kp GRAVE>;
             key-positions = <0 1>;
+            layers = <0>;
+            timeout-ms = <30>;
+        };
+
+        shift+p {
+            bindings = <&kt LS(P)>;
+            key-positions = <8 9>;
+            layers = <0>;
+            timeout-ms = <30>;
         };
     };
 
@@ -151,9 +161,8 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <138>;
+            tapping-term-ms = <135>;
             flavor = "tap-preferred";
-            quick-tap-ms = <110>;
         };
     };
 

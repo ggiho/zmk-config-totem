@@ -106,7 +106,7 @@
         };
 
         shift+p {
-            bindings = <&kt LS(P)>;
+            bindings = <&kp LS(P)>;
             key-positions = <8 9>;
             layers = <0>;
             timeout-ms = <30>;

@@ -219,10 +219,10 @@
 
         nav_num {
             bindings = <
-           &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(E)  &kp LG(NUMBER_8)  &kp LS(LG(T))    &none      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS
-           &kp LG(A)         &tmux_prefix_s    &kp D      &trans            &kp LA(LS(G))    &none      &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp LG(LS(RIGHT))
-&kp CARET  &trans            &trans            &trans     &trans            &trans           &kp PLUS   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none              &none
-                                               &trans     &trans            &trans           &kp EQUAL  &kp NUMBER_0  &kp DOT
+           &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(E)  &kp LG(NUMBER_8)   &kp LS(LG(T))    &none      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS
+           &kp LG(A)         &tmux_prefix_s    &kp D      &kp LA(LC(LG(F)))  &kp LA(LS(G))    &none      &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp LG(LS(RIGHT))
+&kp CARET  &trans            &trans            &trans     &trans             &trans           &kp PLUS   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none              &none
+                                               &trans     &trans             &trans           &kp EQUAL  &kp NUMBER_0  &kp DOT
             >;
         };
 
@@ -256,7 +256,7 @@
         num_layer {
             bindings = <
         &trans  &where   &trans  &trans  &trans       &trans  &kp N7        &kp N8   &kp N9  &kp MINUS
-        &trans  &select  &trans  &trans  &group_by    &trans  &kp N4        &kp N5   &kp N6  &trans
+        &trans  &select  &trans  &from   &group_by    &trans  &kp N4        &kp N5   &kp N6  &trans
 &trans  &trans  &trans   &count  &trans  &trans       &trans  &kp NUMBER_1  &kp N2   &kp N3  &trans     &trans
                          &trans  &trans  &trans       &trans  &kp N0        &kp DOT
             >;

@@ -33,7 +33,7 @@
 
         equal {
             bindings = <&kp EQUAL>;
-            key-positions = <16 8>;
+            key-positions = <8 6>;
         };
 
         copy {
@@ -79,11 +79,6 @@
             bindings = <&kp LC(A)>;
             key-positions = <10 11>;
             layers = <0>;
-        };
-
-        underscore {
-            bindings = <&kp UNDERSCORE>;
-            key-positions = <27 17>;
         };
 
         single_quotes {
@@ -173,6 +168,41 @@
             bindings = <&kp LC(A) &kp S>;
             label = "TMUX_PREFIX_S";
         };
+
+        count: count {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp C &kp O &kp U &kp N &kp T &kp LPAR &kp STAR &kp RPAR>;
+            label = "COUNT";
+        };
+
+        select: select {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp S &kp E &kp L &kp E &kp C &kp T &kp SPACE>;
+            label = "SELECT";
+        };
+
+        from: from {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp F &kp R &kp O &kp M &kp SPACE>;
+            label = "FROM";
+        };
+
+        where: where {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp W &kp H &kp E &kp R &kp E &kp SPACE>;
+            label = "WHERE";
+        };
+
+        group_by: group_by {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp G &kp R &kp O &kp U &kp P &kp SPACE &kp B &kp Y &kp SPACE>;
+            label = "GROUP_BY";
+        };
     };
 
     keymap {
@@ -180,10 +210,10 @@
 
         base {
             bindings = <
-       &kp Q                   &kp W                &kp E                    &kp R                     &kp T                            &kp Y      &kp U                      &kp I       &kp O    &kp P
-       &homerow_LCtrl LCTRL A  &homerow LEFT_ALT S  &homerow LEFT_COMMAND D  &homerow_LShift LSHIFT F  &kp G                            &kp H      &kp J                      &kp K       &kp L    &homerow_Rshift RSHFT SEMICOLON
-&mo 5  &kp Z                   &kp X                &kp C                    &kp V                     &kp B                            &kp N      &kp M                      &kp COMMA   &kp DOT  &kp SLASH                        &kp SINGLE_QUOTE
-                                                    &kp LGUI                 &lt 1 SPACE               &homerow LA(LC(LEFT_GUI)) TAB    &kp ENTER  &LT_LANG_FAST 2 BACKSLASH  &caps_word
+       &kp Q                   &kp W                &kp E                    &kp R                     &kp T        &kp Y      &kp U                      &kp I       &kp O    &kp P
+       &homerow_LCtrl LCTRL A  &homerow LEFT_ALT S  &homerow LEFT_COMMAND D  &homerow_LShift LSHIFT F  &kp G        &kp H      &kp J                      &kp K       &kp L    &homerow_Rshift RSHFT SEMICOLON
+&mo 4  &kp Z                   &kp X                &kp C                    &kp V                     &kp B        &kp N      &kp M                      &kp COMMA   &kp DOT  &kp SLASH                        &kp SINGLE_QUOTE
+                                                    &kp LGUI                 &lt 1 SPACE               &lt 5 TAB    &kp ENTER  &LT_LANG_FAST 2 BACKSLASH  &caps_word
             >;
         };
 
@@ -192,7 +222,7 @@
            &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(E)  &kp LG(NUMBER_8)  &kp LS(LG(T))    &none      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS
            &kp LG(A)         &tmux_prefix_s    &kp D      &trans            &kp LA(LS(G))    &none      &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp LG(LS(RIGHT))
 &kp CARET  &trans            &trans            &trans     &trans            &trans           &kp PLUS   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none              &none
-                                               &trans     &trans            &trans           &kp EQUAL  &kp NUMBER_0  &kp MINUS
+                                               &trans     &trans            &trans           &kp EQUAL  &kp NUMBER_0  &kp DOT
             >;
         };
 
@@ -200,7 +230,7 @@
             bindings = <
            &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6   &kp NUMBER_7          &kp NUMBER_8   &kp NUMBER_9           &kp NUMBER_0
            &kp EXCLAMATION  &kp AT_SIGN   &kp HASH      &kp DOLLAR    &kp PERCENT     &kp AMPERSAND  &kp LEFT_PARENTHESIS  &kp ASTERISK   &kp RIGHT_PARENTHESIS  &kp RS(COLON)
-&kp TILDE  &trans           &trans        &trans        &trans        &trans          &trans         &trans                &kp LESS_THAN  &kp GREATER_THAN       &none          &trans
+&kp TILDE  &trans           &trans        &count        &trans        &trans          &trans         &trans                &kp LESS_THAN  &kp GREATER_THAN       &none          &trans
                                           &trans        &trans        &trans          &none          &none                 &none
             >;
         };
@@ -216,19 +246,19 @@
 
         layer_7 {
             bindings = <
-        &kp LA(NUMBER_1)  &kp LA(NUMBER_2)  &kp LA(NUMBER_3)  &trans  &trans    &trans  &trans  &trans          &mmv MOVE_UP    &mmv MOVE_RIGHT
-        &trans            &trans            &trans            &trans  &trans    &trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &trans
-&trans  &trans            &trans            &trans            &trans  &trans    &trans  &trans  &mkp LCLK       &trans          &trans           &trans
-                                            &trans            &trans  &trans    &trans  &trans  &trans
+        &kp LA(LC(LG(NUMBER_1)))  &kp LA(LC(LG(NUMBER_2)))  &kp LA(LC(LG(NUMBER_3)))  &trans  &trans    &trans  &trans  &trans          &mmv MOVE_UP    &mmv MOVE_RIGHT
+        &trans                    &trans                    &trans                    &trans  &trans    &trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &trans
+&trans  &trans                    &trans                    &trans                    &trans  &trans    &trans  &trans  &mkp LCLK       &trans          &trans           &trans
+                                                            &trans                    &trans  &trans    &trans  &trans  &trans
             >;
         };
 
         num_layer {
             bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &kp N7        &kp N8  &kp N9  &kp MINUS
-        &trans  &trans  &trans  &trans  &trans    &trans  &kp N4        &kp N5  &kp N6  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp NUMBER_1  &kp N2  &kp N3  &trans     &trans
-                        &trans  &trans  &trans    &trans  &kp N0        &trans
+        &trans  &where   &trans  &trans  &trans       &trans  &kp N7        &kp N8   &kp N9  &kp MINUS
+        &trans  &select  &trans  &trans  &group_by    &trans  &kp N4        &kp N5   &kp N6  &trans
+&trans  &trans  &trans   &count  &trans  &trans       &trans  &kp NUMBER_1  &kp N2   &kp N3  &trans     &trans
+                         &trans  &trans  &trans       &trans  &kp N0        &kp DOT
             >;
         };
     };

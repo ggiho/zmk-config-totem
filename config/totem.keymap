@@ -108,7 +108,7 @@
         };
 
         underscore {
-            bindings = <&kt UNDERSCORE>;
+            bindings = <&kp UNDERSCORE>;
             key-positions = <27 17>;
         };
     };

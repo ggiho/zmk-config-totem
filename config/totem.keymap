@@ -228,7 +228,7 @@
             bindings = <
            &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6   &kp NUMBER_7          &kp NUMBER_8   &kp NUMBER_9           &kp NUMBER_0
            &kp EXCLAMATION  &kp AT_SIGN   &kp HASH      &kp DOLLAR    &kp PERCENT     &kp AMPERSAND  &kp LEFT_PARENTHESIS  &kp ASTERISK   &kp RIGHT_PARENTHESIS  &kp RS(COLON)
-&kp TILDE  &trans           &trans        &count        &trans        &trans          &trans         &trans                &kp LESS_THAN  &kp GREATER_THAN       &none          &trans
+&kp TILDE  &trans           &trans        &count        &trans        &trans          &trans         &kp CARET             &kp LESS_THAN  &kp GREATER_THAN       &none          &trans
                                           &trans        &trans        &trans          &none          &none                 &none
             >;
         };

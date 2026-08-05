@@ -93,13 +93,6 @@
             layers = <0>;
         };
 
-        grave {
-            bindings = <&kp GRAVE>;
-            key-positions = <0 1>;
-            layers = <0>;
-            timeout-ms = <30>;
-        };
-
         shift+p {
             bindings = <&kp LS(P)>;
             key-positions = <8 9>;
@@ -120,7 +113,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <145>;
+            tapping-term-ms = <142>;
         };
 
         homerow: homerow {
@@ -161,7 +154,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <137>;
+            tapping-term-ms = <136>;
             flavor = "tap-preferred";
         };
     };
@@ -215,10 +208,10 @@
 
         base {
             bindings = <
-       &kp Q                   &kp W                &kp E                    &kp R                     &kp T        &kp Y      &kp U                      &kp I       &kp O    &kp P
-       &homerow_LCtrl LCTRL A  &homerow LEFT_ALT S  &homerow LEFT_COMMAND D  &homerow_LShift LSHIFT F  &kp G        &kp H      &kp J                      &kp K       &kp L    &homerow_Rshift RSHFT SEMICOLON
-&mo 4  &kp Z                   &kp X                &kp C                    &kp V                     &kp B        &kp N      &kp M                      &kp COMMA   &kp DOT  &kp SLASH                        &kp SINGLE_QUOTE
-                                                    &caps_word               &lt 1 SPACE               &lt 5 TAB    &kp ENTER  &LT_LANG_FAST 2 BACKSLASH  &caps_word
+             &kp Q                   &kp W                &kp E                    &kp R                     &kp T        &kp Y      &kp U                      &kp I       &kp O    &kp P
+             &homerow_LCtrl LCTRL A  &homerow LEFT_ALT S  &homerow LEFT_COMMAND D  &homerow_LShift LSHIFT F  &kp G        &kp H      &kp J                      &kp K       &kp L    &homerow_Rshift RSHFT SEMICOLON
+&lt 4 GRAVE  &kp Z                   &kp X                &kp C                    &kp V                     &kp B        &kp N      &kp M                      &kp COMMA   &kp DOT  &kp SLASH                        &kp SINGLE_QUOTE
+                                                          &caps_word               &lt 1 SPACE               &lt 5 TAB    &kp ENTER  &LT_LANG_FAST 2 BACKSLASH  &caps_word
             >;
         };
 

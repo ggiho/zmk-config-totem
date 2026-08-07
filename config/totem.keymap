@@ -27,7 +27,7 @@
 
         minus {
             bindings = <&kp MINUS>;
-            key-positions = <16 7>;
+            key-positions = <7 8>;
             layers = <0>;
         };
 
@@ -65,7 +65,7 @@
 
         right_parenthesis {
             bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <7 8>;
+            key-positions = <8 6>;
             layers = <0>;
         };
 
@@ -113,7 +113,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <142>;
+            tapping-term-ms = <140>;
         };
 
         homerow: homerow {
@@ -154,7 +154,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <136>;
+            tapping-term-ms = <137>;
             flavor = "tap-preferred";
         };
     };

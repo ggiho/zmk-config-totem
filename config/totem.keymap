@@ -27,7 +27,7 @@
 
         minus {
             bindings = <&kp MINUS>;
-            key-positions = <7 8>;
+            key-positions = <16 7>;
             layers = <0>;
         };
 

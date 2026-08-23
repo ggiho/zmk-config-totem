@@ -154,7 +154,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <138>;
+            tapping-term-ms = <140>;
             flavor = "tap-preferred";
         };
     };
@@ -208,18 +208,18 @@
 
         base {
             bindings = <
-             &kp Q                   &kp W                &kp E                    &kp R                     &kp T        &kp Y      &kp U                      &kp I       &kp O    &kp P
-             &homerow_LCtrl LCTRL A  &homerow LEFT_ALT S  &homerow LEFT_COMMAND D  &homerow_LShift LSHIFT F  &kp G        &kp H      &kp J                      &kp K       &kp L    &homerow_Rshift RSHFT SEMICOLON
-&lt 4 GRAVE  &kp Z                   &kp X                &kp C                    &kp V                     &kp B        &kp N      &kp M                      &kp COMMA   &kp DOT  &kp SLASH                        &kp SINGLE_QUOTE
-                                                          &kp LEFT_COMMAND         &lt 1 SPACE               &lt 5 TAB    &kp ENTER  &LT_LANG_FAST 2 BACKSLASH  &caps_word
+             &kp Q                   &kp W                &kp E                    &kp R                     &kp T        &kp Y      &kp U                &kp I          &kp O    &kp P
+             &homerow_LCtrl LCTRL A  &homerow LEFT_ALT S  &homerow LEFT_COMMAND D  &homerow_LShift LSHIFT F  &kp G        &kp H      &kp J                &kp K          &kp L    &homerow_Rshift RSHFT SEMICOLON
+&lt 4 GRAVE  &kp Z                   &kp X                &kp C                    &kp V                     &kp B        &kp N      &kp M                &kp COMMA      &kp DOT  &kp SLASH                        &caps_word
+                                                          &kp LEFT_COMMAND         &lt 1 SPACE               &lt 5 TAB    &kp ENTER  &LT_LANG_FAST 2 F18  &kp BACKSLASH
             >;
         };
 
         nav_num {
             bindings = <
            &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(E)  &kp LG(NUMBER_8)   &kp LS(LG(T))    &none      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS
-           &kp LG(A)         &tmux_prefix_s    &kp D      &kp LA(LC(LG(F)))  &kp LA(LS(G))    &none      &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp LG(LS(RIGHT))
-&kp CARET  &trans            &trans            &trans     &trans             &trans           &kp PLUS   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none              &none
+           &kp LG(A)         &tmux_prefix_s    &kp D      &kp LA(LC(LG(F)))  &kp LA(LS(G))    &kp HOME   &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp END
+&kp CARET  &trans            &trans            &trans     &trans             &trans           &kp PLUS   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none      &none
                                                &trans     &trans             &trans           &kp EQUAL  &kp NUMBER_0  &kp DOT
             >;
         };

@@ -156,6 +156,13 @@
             tapping-term-ms = <140>;
             flavor = "tap-preferred";
         };
+
+        v_tab_dance: v_tab_dance {
+            compatible = "zmk,behavior-tap-dance";
+            label = "V_TAB_DANCE";
+            #binding-cells = <0>;
+            bindings = <&kp V>, <&tmux_visual_mode>;
+        };
     };
 
     macros {
@@ -200,6 +207,13 @@
             bindings = <&kp G &kp R &kp O &kp U &kp P &kp SPACE &kp B &kp Y &kp SPACE>;
             label = "GROUP_BY";
         };
+
+        tmux_visual_mode: tmux_visual_mode {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(A) &kp LEFT_BRACKET>;
+            label = "TMUX_VISUAL_MODE";
+        };
     };
 
     keymap {
@@ -207,10 +221,10 @@
 
         base {
             bindings = <
-             &kp Q                   &kp W                &kp E                    &kp R                     &kp T        &kp Y      &kp U                      &kp I      &kp O    &kp P
-             &homerow_LCtrl LCTRL A  &homerow LEFT_ALT S  &homerow LEFT_COMMAND D  &homerow_LShift LSHIFT F  &kp G        &kp H      &kp J                      &kp K      &kp L    &homerow_Rshift RSHFT SEMICOLON
-&lt 4 GRAVE  &kp Z                   &kp X                &kp C                    &kp V                     &kp B        &kp N      &kp M                      &kp COMMA  &kp DOT  &kp SLASH                        &caps_word
-                                                          &kp LEFT_COMMAND         &lt 1 SPACE               &lt 5 TAB    &kp ENTER  &LT_LANG_FAST 2 BACKSLASH  &kp F18
+             &kp Q                   &kp W                &kp E                    &kp R                     &kp T        &kp Y      &kp U                      &kp I       &kp O    &kp P
+             &homerow_LCtrl LCTRL A  &homerow LEFT_ALT S  &homerow LEFT_COMMAND D  &homerow_LShift LSHIFT F  &kp G        &kp H      &kp J                      &kp K       &kp L    &homerow_Rshift RSHFT SEMICOLON
+&lt 4 GRAVE  &kp Z                   &kp X                &kp C                    &kp V                     &kp B        &kp N      &kp M                      &kp COMMA   &kp DOT  &kp SLASH                        &none
+                                                          &kp LEFT_COMMAND         &lt 1 SPACE               &lt 5 TAB    &kp ENTER  &LT_LANG_FAST 2 BACKSLASH  &caps_word
             >;
         };
 
